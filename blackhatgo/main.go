@@ -1,14 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"net/http"
-)
+import "fmt"
 
 func main() {
-	fmt.Println("hello world")
-	http.ListenAndServe(":8080", nil)
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Fprintf(w, "hello world")
-	})
+	x := 1
+	if x == 1 {
+		fmt.Printf("equal")
+	} else if x != 1 {
+		fmt.Println("not equal ")
+	} else {
+		fmt.Println("never")
+	}
 }
